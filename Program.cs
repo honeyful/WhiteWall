@@ -133,7 +133,7 @@ namespace WhiteWall
             {
                 Console.Write("Path(Back to Menu)>>>");
                 var f = Console.ReadLine();
-                if (f.Equals("Back")) return;
+                if (f.ToLower().Equals("back")) return;
                 if (File.Exists(f))
                 {
                     whiteList.Add(f);
@@ -157,7 +157,7 @@ namespace WhiteWall
                 viewWhitelist();
                 Console.Write("Remove(Back to Menu)>>>");
                 var s = Console.ReadLine();
-                if (s.ToString().Equals("Back")) return;
+                if (s.ToLower().Equals("back")) return;
                 try
                 {
                     whiteList.RemoveAt(int.Parse(s));
